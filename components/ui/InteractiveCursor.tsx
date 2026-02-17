@@ -29,7 +29,7 @@ export default function InteractiveCursor() {
     };
 
     let pos = { x: 0, y: 0 };
-    let lines: Line[] = [];
+    let lines: any[] = [];
     let animationFrameId: number;
     // @ts-ignore
     let f: Oscillator;
