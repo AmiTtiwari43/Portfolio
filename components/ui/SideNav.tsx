@@ -122,11 +122,11 @@ export default function SideNav() {
                   />
                 )}
 
-                <item.icon 
-                  className={`w-5 h-5 transition-colors duration-300 ${
+                {React.createElement(item.icon, {
+                  className: `w-5 h-5 transition-colors duration-300 ${
                     isActive ? "text-blue-400" : "text-white/60 group-hover:text-white"
-                  }`} 
-                />
+                  }`
+                })}
               </motion.button>
             </div>
           );
@@ -144,7 +144,9 @@ export default function SideNav() {
                 className={`p-2 rounded-full transition-all shrink-0 ${isActive ? "bg-white/20 text-white" : "text-white/50"}`}
                 aria-label={item.label}
              >
-               <item.icon className="w-4 h-4 sm:w-5 sm:h-5" />
+               {React.createElement(item.icon, {
+                 className: "w-4 h-4 sm:w-5 sm:h-5"
+               })}
              </button>
           );
         })}
