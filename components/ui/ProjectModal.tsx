@@ -93,7 +93,8 @@ export default function ProjectModal({ project, isOpen, onClose, onNext, onPrev 
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="relative w-full max-w-5xl bg-neutral-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[90vh]"
+              className="relative w-full max-w-5xl bg-neutral-900 border border-white/10 rounded-3xl overflow-y-auto custom-scrollbar shadow-2xl flex flex-col md:flex-row max-h-[90vh]"
+              data-lenis-prevent
             >
               {/* Close Button - Moved slightly and increased z-index */}
               <button
@@ -119,12 +120,16 @@ export default function ProjectModal({ project, isOpen, onClose, onNext, onPrev 
             </div>
 
             {/* Right: Details */}
-            <div className="w-full md:w-2/5 p-6 md:p-8 overflow-y-auto custom-scrollbar flex flex-col">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            <div className="w-full md:w-2/5 p-8 md:p-12 flex flex-col glass-card border-none">
+              <div className="inline-block w-fit px-3 py-1 rounded-full border border-accent-primary/20 bg-accent-primary/5 text-[10px] text-accent-primary uppercase tracking-[0.3em] mb-6">
+                Project_Detail::07
+              </div>
+
+              <h2 className="text-3xl md:text-5xl font-bold colorful-gradient-text tracking-tighter uppercase mb-6 leading-tight">
                 {project.title}
               </h2>
               
-              <p className="text-neutral-400 text-sm md:text-base mb-6 leading-relaxed line-clamp-4 hover:line-clamp-none transition-all">
+              <p className="text-neutral-400 text-base mb-10 leading-relaxed font-light">
                 {project.description}
               </p>
 
@@ -134,40 +139,41 @@ export default function ProjectModal({ project, isOpen, onClose, onNext, onPrev 
                   <h4 className="text-white text-sm font-semibold mb-3 tracking-widest uppercase">
                     Key Highlights
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-4">
                     {project.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-neutral-300 text-[13px]">
-                        <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <li key={idx} className="flex items-start gap-3 text-neutral-300 text-sm font-light">
+                        <CheckCircle2 className="w-5 h-5 text-accent-secondary shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               )}
-
+ 
               {/* Tech Stack */}
-              <div className="mb-8">
-                <h4 className="text-white text-sm font-semibold mb-3 tracking-widest uppercase">Stack</h4>
-                <div className="flex flex-wrap gap-1.5">
+              <div className="mb-10">
+                <h4 className="text-white text-[10px] font-bold mb-4 tracking-[0.3em] uppercase opacity-50">Stack_Configuration</h4>
+                <div className="flex flex-wrap gap-2">
                   {project.tech.map((t) => (
-                    <span key={t} className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-neutral-400 text-[10px] font-mono">
+                    <span key={t} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-500 text-[10px] font-mono tracking-widest">
                       {t}
                     </span>
                   ))}
                 </div>
               </div>
-
+ 
               {/* Links */}
-              <div className="flex flex-col sm:flex-row gap-3 mt-auto pt-4 border-t border-white/10">
+              <div className="flex flex-col gap-3 mt-auto pt-8 border-t border-white/5">
                 {project.liveUrl && project.liveUrl !== "#" && (
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white text-black text-sm font-bold hover:bg-neutral-200 transition-colors"
+                    className="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-neutral-200 transition-all group/btn relative overflow-hidden"
                   >
+                    <div className="absolute inset-0 bg-accent-secondary translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000 opacity-20 skew-x-12" />
                     <ExternalLink className="w-4 h-4" />
-                    Demo
+                    Live_Deployment
                   </a>
                 )}
                 {project.githubUrl && (
@@ -175,10 +181,10 @@ export default function ProjectModal({ project, isOpen, onClose, onNext, onPrev 
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white/10 text-white text-sm font-bold hover:bg-white/20 border border-white/10 transition-colors"
+                    className="w-full flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-white/5 text-white text-xs font-bold uppercase tracking-widest hover:bg-white/10 border border-white/10 transition-all"
                   >
-                    <Github className="w-4 h-4" />
-                    GitHub
+                    <Github className="w-4 h-4 text-accent-primary" />
+                    Source_Code
                   </a>
                 )}
               </div>

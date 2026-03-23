@@ -44,18 +44,26 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="min-h-screen w-full flex flex-col items-center justify-center relative bg-black/40 backdrop-blur-md py-20"
+      className="min-h-screen w-full flex flex-col items-center justify-center relative py-32 overflow-hidden"
     >
+      {/* Background Accent Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-accent-primary/5 blur-[120px] rounded-full -z-10 animate-pulse" />
+
       <motion.div 
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="max-w-5xl w-full px-4 md:pl-24 z-10 pointer-events-auto"
+        className="section-container relative z-10 pointer-events-auto"
       >
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-12 text-center">
-          Featured Projects
-        </h2>
+        <div className="text-center mb-16">
+          <div className="inline-block px-3 py-1 rounded-full border border-accent-primary/20 bg-accent-primary/5 text-[10px] text-accent-primary uppercase tracking-[0.3em] mb-4">
+            Digital_Artifacts::07
+          </div>
+          <h2 className="text-4xl md:text-8xl font-bold colorful-gradient-text tracking-tighter uppercase leading-none">
+            Projects
+          </h2>
+        </div>
 
         {/* Grid Container */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 min-h-[400px]">
