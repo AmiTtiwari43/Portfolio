@@ -1,60 +1,95 @@
 "use client";
-import { Spotlight } from "@/components/ui/spotlight";
+
 import { motion } from "framer-motion";
-import { Code2, Cpu, Rocket } from "lucide-react";
+import { Code2, Target, Zap, ChevronRight } from "lucide-react";
+import { SOCIAL_LINKS } from "@/lib/data";
 
 export default function AboutSection() {
-  return (
-    <section id="about" className="min-h-screen w-full relative flex items-center justify-center overflow-hidden bg-transparent py-20 md:py-0">
-      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20 opacity-50" fill="white" />
-      
-      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-2">My Journey</h2>
-          <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-            About Me
-          </h1>
-        </motion.div>
+  const metrics = [
+    { label: "LeetCode_Solved", value: "600+", icon: Code2, color: "text-accent-primary", progress: 85 },
+    { label: "Active_Streak", value: "200D", icon: Zap, color: "text-accent-secondary", progress: 70 },
+    { label: "Neural_Accuracy", value: "98%", icon: Target, color: "text-accent-tertiary", progress: 98 }
+  ];
 
-        <div className="flex justify-center">
-          {/* Main Info Card */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+  return (
+    <section id="about" className="min-h-screen w-full relative flex items-center justify-center py-20 overflow-hidden pointer-events-auto">
+      {/* Background Accent Glow */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-accent-primary/5 blur-[100px] rounded-full -z-10" />
+
+      <div className="section-container relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl p-8 md:p-12 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl relative group overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative z-10">
-              <h3 className="text-2xl font-semibold mb-6 text-white flex items-center gap-2">
-                <Code2 className="w-6 h-6 text-blue-400" />
-                Who I Am
-              </h3>
-              <div className="space-y-6 text-neutral-300 leading-relaxed text-lg">
-                <p>
-                  I'm a <span className="text-white font-medium">Full Stack Developer</span> dedicated to building scalable and immersive digital experiences. With a strong foundation in the MERN stack and Next.js, I bridge the gap between complex backend architecture and fluid frontend design.
-                </p>
-                <p>
-                  My experience spans from healthcare systems to interactive 3D web applications. I thrive on solving technical challenges, having tackled <span className="text-white font-medium">600+ problems on LeetCode</span>, ensuring every application I build is both performant and robust.
-                </p>
-                <div className="pt-4 flex flex-wrap gap-4">
-                  <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-xl flex items-center gap-2 hover:bg-white/10 transition-colors">
-                    <Rocket className="w-4 h-4 text-orange-400" />
-                    <span className="text-sm text-neutral-400">Project Focused</span>
-                  </div>
-                  <div className="bg-white/5 border border-white/10 px-4 py-2 rounded-xl flex items-center gap-2 hover:bg-white/10 transition-colors">
-                    <Cpu className="w-4 h-4 text-cyan-400" />
-                    <span className="text-sm text-neutral-400">Efficient Architecture</span>
-                  </div>
-                </div>
+            <div className="inline-block px-3 py-1 rounded-full border border-accent-primary/20 bg-accent-primary/5 text-[10px] text-accent-primary uppercase tracking-[0.3em] mb-6">
+              Core_Identity::02
+            </div>
+            
+            <h2 className="text-4xl md:text-7xl font-bold colorful-gradient-text tracking-tighter uppercase mb-8">
+              Human_Interface <br /> 
+              <span className="text-white">Protocol</span>
+            </h2>
+
+            <div className="space-y-6 text-neutral-400 text-lg font-light leading-relaxed">
+              <p>
+                I'm a <span className="text-white font-medium">Full Stack Architect</span> specializing in high-performance digital ecosystems. My workflow merges robust backend engineering with fluid, futuristic interface design.
+              </p>
+              <p>
+                Currently evolving at <span className="text-accent-secondary">Lovely Professional University</span>, I focus on building systems that don't just work, but inspire. My approach is data-driven, security-first, and always pushing the boundaries of modern web standards.
+              </p>
+
+              <div className="pt-8">
+                 <a 
+                   href={SOCIAL_LINKS.leetcode} 
+                   target="_blank" 
+                   className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.4em] font-bold text-accent-secondary hover:text-white transition-colors group"
+                 >
+                    Access_Neural_Metrics
+                    <ChevronRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                 </a>
               </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
+            <div className="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden group">
+               <div className="absolute top-0 right-0 p-4 text-[8px] text-accent-primary/40 tracking-[0.4em] font-bold">BIO_DATA_EXTRACT</div>
+               
+               <div className="space-y-10">
+                  {metrics.map((metric, i) => (
+                    <div key={metric.label} className="space-y-4">
+                        <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <metric.icon className={`w-5 h-5 ${metric.color}`} />
+                                <span className="text-[10px] uppercase tracking-widest text-neutral-500 font-bold">{metric.label}</span>
+                            </div>
+                            <span className="text-lg font-mono text-white">{metric.value}</span>
+                        </div>
+                        <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                            <motion.div 
+                                initial={{ width: 0 }}
+                                whileInView={{ width: `${metric.progress}%` }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 1.5, delay: i * 0.2 }}
+                                className={`h-full bg-gradient-to-r from-transparent via ${metric.color.replace('text-', 'bg-')} to-white/20`}
+                            />
+                        </div>
+                    </div>
+                  ))}
+               </div>
+
+               {/* Decorative holographic circles */}
+               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-accent-secondary/5 blur-[50px] rounded-full" />
             </div>
           </motion.div>
         </div>

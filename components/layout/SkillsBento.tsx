@@ -55,56 +55,62 @@ import { motion } from "framer-motion";
 
 export default function SkillsBento() {
   return (
-    <section id="skills-bento" className="min-h-screen w-full flex flex-col items-center justify-center relative py-20 pointer-events-auto z-20">
+    <section id="skills-bento" className="min-h-screen w-full flex flex-col items-center justify-center relative py-24 pointer-events-auto z-20">
+      {/* Background Accent Glow */}
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-accent-primary/5 blur-[100px] rounded-full -z-10" />
+
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="max-w-7xl w-full px-4 md:pl-24"
+        className="section-container relative z-10"
       >
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-16 text-center">
-          Technical Arsenal
-        </h2>
+        <div className="text-center mb-16">
+          <div className="inline-block px-3 py-1 rounded-full border border-accent-primary/20 bg-accent-primary/5 text-[10px] text-accent-primary uppercase tracking-[0.3em] mb-4">
+            Technical_Stack::05
+          </div>
+          <h2 className="text-4xl md:text-8xl font-bold colorful-gradient-text tracking-tighter uppercase mb-4">
+            Arsenal
+          </h2>
+        </div>
         
         <BentoGrid className="max-w-6xl mx-auto">
           {/* Frontend */}
           <BentoGridItem 
              title="Frontend"
              description={<SkillIconGrid skills={SKILLS.frontend} />}
-             header={<Globe2 className="w-10 h-10 text-blue-500" />}
-             className="md:col-span-1"
-             icon={<Globe2 className="h-4 w-4 text-neutral-500" />}
+             header={<Globe2 className="w-10 h-10 text-accent-primary" />}
+             className="md:col-span-1 glass-card"
+             icon={<Globe2 className="h-4 w-4 text-accent-primary" />}
           />
           
           {/* Backend */}
           <BentoGridItem 
              title="Backend"
              description={<SkillIconGrid skills={SKILLS.backend} />}
-             header={<Server className="w-10 h-10 text-green-500" />}
-             className="md:col-span-2"
-             icon={<Server className="h-4 w-4 text-neutral-500" />}
+             header={<Server className="w-10 h-10 text-accent-secondary" />}
+             className="md:col-span-2 glass-card"
+             icon={<Server className="h-4 w-4 text-accent-secondary" />}
           />
           
           {/* Databases */}
           <BentoGridItem 
              title="Database"
              description={<SkillIconGrid skills={SKILLS.database} />}
-             header={<Database className="w-10 h-10 text-yellow-500" />}
-             className="md:col-span-1"
-             icon={<Database className="h-4 w-4 text-neutral-500" />}
+             header={<Database className="w-10 h-10 text-accent-tertiary" />}
+             className="md:col-span-1 glass-card"
+             icon={<Database className="h-4 w-4 text-accent-tertiary" />}
           />
-
+ 
           {/* Cloud & Tools */}
           <BentoGridItem 
              title="Cloud"
              description={<SkillIconGrid skills={SKILLS.cloud} />}
-             header={<Cloud className="w-10 h-10 text-cyan-500" />}
-             className="md:col-span-1"
-             icon={<Cloud className="h-4 w-4 text-neutral-500" />}
+             header={<Cloud className="w-10 h-10 text-accent-secondary" />}
+             className="md:col-span-1 glass-card"
+             icon={<Cloud className="h-4 w-4 text-accent-secondary" />}
           />
-          
-
         </BentoGrid>
       </motion.div>
     </section>

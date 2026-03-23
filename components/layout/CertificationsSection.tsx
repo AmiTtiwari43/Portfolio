@@ -7,21 +7,26 @@ import Image from "next/image";
 
 export default function CertificationsSection() {
   return (
-    <section id="certifications" className="min-h-screen w-full flex flex-col items-center justify-center relative py-20 bg-transparent">
-      <div className="max-w-7xl w-full px-4 md:pl-24 z-10 pointer-events-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-sm uppercase tracking-[0.2em] text-neutral-500 mb-2">My Credentials</h2>
-          <h1 className="text-4xl md:text-6xl font-bold text-white">
-            Certifications
-          </h1>
-        </motion.div>
+    <section id="certifications" className="min-h-screen w-full flex flex-col items-center justify-center relative py-24 bg-transparent overflow-hidden">
+      {/* Background Accent Glow */}
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-primary/5 blur-[100px] rounded-full -z-10" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div className="section-container relative z-10 pointer-events-auto">
+        <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+        >
+          <div className="inline-block px-3 py-1 rounded-full border border-accent-primary/20 bg-accent-primary/5 text-[10px] text-accent-primary uppercase tracking-[0.3em] mb-4">
+            Credential_Registry::06
+          </div>
+          <h2 className="text-4xl md:text-8xl font-bold colorful-gradient-text tracking-tighter uppercase">
+            Certifications
+          </h2>
+        </motion.div>
+ 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {CERTIFICATIONS.map((cert, index) => (
             <motion.a
               key={cert.name}
@@ -32,7 +37,7 @@ export default function CertificationsSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative flex flex-col bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="group relative flex flex-col glass-card rounded-3xl overflow-hidden hover:scale-[1.02] active:scale-[0.98]"
             >
               {/* Image Preview */}
               <div className="relative h-48 w-full overflow-hidden">
@@ -47,27 +52,27 @@ export default function CertificationsSection() {
                   <ExternalLink className="w-4 h-4 text-white" />
                 </div>
               </div>
-
+ 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-8">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-purple-500/10 text-purple-400">
+                  <div className="p-3 rounded-xl bg-accent-primary/10 text-accent-primary border border-accent-primary/20">
                     <Award className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-primary transition-colors uppercase tracking-tight">
                       {cert.name}
                     </h3>
-                    <p className="text-neutral-400 text-sm mb-2">{cert.issuer}</p>
-                    <div className="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-full text-xs text-neutral-500">
+                    <p className="text-neutral-400 text-sm mb-4 font-light">{cert.issuer}</p>
+                    <div className="inline-block px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] text-neutral-500 font-mono tracking-widest">
                       {cert.date}
                     </div>
                   </div>
                 </div>
               </div>
-
+ 
               {/* Hover Glow */}
-              <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+              <div className="absolute inset-0 bg-accent-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             </motion.a>
           ))}
         </div>

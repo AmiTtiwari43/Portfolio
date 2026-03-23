@@ -129,14 +129,22 @@ export const CERTIFICATIONS = [
   }
 ];
 
-export const ACHIEVEMENTS = [
+export interface Achievement {
+  title: string;
+  description: string;
+  link?: string;
+}
+
+export const ACHIEVEMENTS: Achievement[] = [
   {
     title: "LeetCode",
-    description: "Solved 600+ Data Structures and Algorithms problems."
+    description: "Solved 600+ Data Structures and Algorithms problems.",
+    link: "https://leetcode.com/u/AmitTiwari27/"
   },
   {
     title: "LeetCode Streak",
-    description: "Maintained a 200+ day continuous coding streak."
+    description: "Maintained a 200+ day continuous coding streak.",
+    link: "https://leetcode.com/u/AmitTiwari27/"
   },
   {
     title: "Hacker Rank",
