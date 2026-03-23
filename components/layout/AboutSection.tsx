@@ -8,7 +8,7 @@ export default function AboutSection() {
   const metrics = [
     { label: "LeetCode_Solved", value: "600+", icon: Code2, color: "text-accent-primary", progress: 85 },
     { label: "Active_Streak", value: "200D", icon: Zap, color: "text-accent-secondary", progress: 70 },
-    { label: "Neural_Accuracy", value: "98%", icon: Target, color: "text-accent-tertiary", progress: 98 }
+    { label: "Problem_Solving_Accuracy", value: "98%", icon: Target, color: "text-accent-tertiary", progress: 98 }
   ];
 
   return (
@@ -30,13 +30,13 @@ export default function AboutSection() {
             </div>
             
             <h2 className="text-4xl md:text-7xl font-bold colorful-gradient-text tracking-tighter uppercase mb-8">
-              Human_Interface <br /> 
-              <span className="text-white">Protocol</span>
+              Know Your <br /> 
+              <span className="text-white">Developer</span>
             </h2>
 
             <div className="space-y-6 text-neutral-400 text-lg font-light leading-relaxed">
               <p>
-                I'm a <span className="text-white font-medium">Full Stack Architect</span> specializing in high-performance digital ecosystems. My workflow merges robust backend engineering with fluid, futuristic interface design.
+                I'm a <span className="text-white font-medium">Full Stack Developer</span> specializing in high-performance digital ecosystems. My workflow merges robust backend engineering with fluid, futuristic interface design.
               </p>
               <p>
                 Currently evolving at <span className="text-accent-secondary">Lovely Professional University</span>, I focus on building systems that don't just work, but inspire. My approach is data-driven, security-first, and always pushing the boundaries of modern web standards.
