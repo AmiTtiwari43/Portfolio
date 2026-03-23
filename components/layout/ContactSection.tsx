@@ -20,7 +20,7 @@ export default function ContactSection() {
   };
   return (
     <section id="contact" className="min-h-screen w-full flex items-center justify-center relative py-20 pointer-events-auto">
-      <div className="max-w-xl w-full px-6 z-10 md:pl-24">
+      <div className="max-w-3xl w-full px-6 z-10 md:pl-24">
         <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

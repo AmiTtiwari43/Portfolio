@@ -60,13 +60,13 @@ export default function SkillsBento() {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="max-w-6xl w-full px-4 md:pl-24"
+        className="max-w-7xl w-full px-4 md:pl-24"
       >
         <h2 className="text-4xl md:text-6xl font-bold text-white mb-16 text-center">
           Technical Arsenal
         </h2>
         
-        <BentoGrid className="max-w-4xl mx-auto">
+        <BentoGrid className="max-w-6xl mx-auto">
           {/* Languages */}
           <BentoGridItem 
              title="Languages"

@@ -8,7 +8,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 export default function ExperienceTimeline() {
   return (
     <section id="experience" className="min-h-screen w-full flex items-center justify-center relative py-20 pointer-events-auto">
-      <div className="max-w-6xl w-full px-4 md:pl-24">
+      <div className="max-w-7xl w-full px-4 md:pl-24">
         <h2 className="text-4xl md:text-6xl font-bold text-white mb-16 text-center">
           Experience
         </h2>

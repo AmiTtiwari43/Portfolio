@@ -51,7 +51,7 @@ export default function ProjectsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8 }}
-        className="max-w-5xl w-full px-4 md:pl-24 z-10 pointer-events-auto"
+        className="max-w-7xl w-full px-4 md:pl-24 z-10 pointer-events-auto"
       >
         <h2 className="text-4xl md:text-6xl font-bold text-white mb-12 text-center">
           Featured Projects

@@ -9,7 +9,7 @@ export default function AchievementsSection() {
 
   return (
     <section id="achievements" className="min-h-[60vh] w-full flex flex-col items-center justify-center relative py-20 pointer-events-auto">
-      <div className="max-w-5xl w-full px-4 md:pl-24 z-10">
+      <div className="max-w-7xl w-full px-4 md:pl-24 z-10">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
