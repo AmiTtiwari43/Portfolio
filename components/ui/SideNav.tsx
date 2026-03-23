@@ -8,7 +8,8 @@ import {
   FolderOpen, 
   Briefcase, 
   Trophy, 
-  Mail
+  Mail,
+  Award
 } from "lucide-react";
 
 interface NavItem {
@@ -23,6 +24,7 @@ const navItems: NavItem[] = [
   { id: "skills", label: "Skills", icon: Cpu },
   { id: "projects", label: "Projects", icon: FolderOpen },
   { id: "experience", label: "Experience", icon: Briefcase },
+  { id: "certifications", label: "Certifications", icon: Award },
   { id: "achievements", label: "Achievements", icon: Trophy },
   { id: "contact", label: "Contact", icon: Mail },
 ];

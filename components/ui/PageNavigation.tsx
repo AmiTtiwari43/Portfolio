@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ChevronUp, ChevronDown } from "lucide-react";
 
-const SECTIONS = ["hero", "about", "skills", "projects", "experience", "achievements", "contact"];
+const SECTIONS = ["hero", "about", "skills", "projects", "experience", "certifications", "achievements", "contact"];
 
 export default function PageNavigation() {
   

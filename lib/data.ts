@@ -91,10 +91,10 @@ export const EXPERIENCES: Experience[] = [
 ];
 
 export const SKILLS = {
-  languages: ["JavaScript", "Python", "Java", "C", "C++", "PHP"],
-  frameworks: ["HTML", "CSS", "React.js", "Next.js", "Node.js", "Express.js", "Redux", "Flask", "Tailwind CSS", "Shadcn/UI"],
-  databases: ["MySQL", "MongoDB", "PostgreSQL"],
-  tools: ["Git", "GitHub", "VS Code", "Docker", "Render", "Vercel", "Netlify", "GCP", "Figma"],
+  frontend: ["React.js", "Next.js", "Tailwind CSS", "Redux", "HTML", "CSS", "Figma"],
+  backend: ["Node.js", "Express.js", "JavaScript", "Python", "Java", "C", "C++", "PHP", "Flask"],
+  database: ["MongoDB", "MySQL", "PostgreSQL"],
+  cloud: ["GCP", "Docker", "Vercel", "Netlify", "Render", "Git", "GitHub", "VS Code"],
   soft: ["Teamwork", "Problem Solving", "Leadership", "Adaptability", "Critical Thinking", "Consistency", "Collaboration"]
 };
 
@@ -102,33 +102,41 @@ export const CERTIFICATIONS = [
   {
     name: "Oracle Cloud Infrastructure 2025 Certified DevOps Professional",
     issuer: "Oracle",
-    date: "Oct 2025"
+    date: "Oct 2025",
+    image: "/ORACLE OCI DEVOPS PROFESSIONAL.png",
+    link: "https://github.com/AmiTtiwari43/Certificates-Certifications/blob/a956af93b5dc077bc2a058c9ccc18aabc0897e66/ORACLE%20OCI%20DEVOPS%20PROFESSIONAL.pdf"
   },
   {
     name: "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
     issuer: "Oracle",
-    date: "Oct 2025"
+    date: "Oct 2025",
+    image: "/ORACLE OCI FOUNDATION ASSOCIATE.png",
+    link: "https://github.com/AmiTtiwari43/Certificates-Certifications/blob/a956af93b5dc077bc2a058c9ccc18aabc0897e66/ORACLE%20OCI%20FOUNDATION%20ASSOCIATE.pdf"
   },
   {
     name: "Software Engineering Job Simulation",
     issuer: "Accenture / Forage",
-    date: "Aug 2024"
+    date: "Aug 2024",
+    image: "/forage accenture job sim.png",
+    link: "https://github.com/AmiTtiwari43/Certificates-Certifications/blob/a956af93b5dc077bc2a058c9ccc18aabc0897e66/forage%20accenture%20job%20sim.pdf"
   },
   {
-    name: "Data Science with Excel & Tableau",
-    issuer: "CSE Pathshala",
-    date: "March 2024"
+    name: "AI for Engineers",
+    issuer: "Outskill",
+    date: "March 2024",
+    image: "/Outskill Ai for engineers.png",
+    link: "https://github.com/AmiTtiwari43/Certificates-Certifications/blob/a956af93b5dc077bc2a058c9ccc18aabc0897e66/Outskill%20AI%20for%20Engineers.pdf"
   }
 ];
 
 export const ACHIEVEMENTS = [
   {
     title: "LeetCode",
-    description: "Solved 550+ Data Structures and Algorithms problems."
+    description: "Solved 600+ Data Structures and Algorithms problems."
   },
   {
     title: "LeetCode Streak",
-    description: "Maintained a 150+ day continuous coding streak."
+    description: "Maintained a 200+ day continuous coding streak."
   },
   {
     title: "Hacker Rank",

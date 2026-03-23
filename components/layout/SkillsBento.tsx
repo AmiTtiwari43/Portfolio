@@ -2,7 +2,7 @@
 
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import { SKILLS, CERTIFICATIONS } from "@/lib/data";
-import { Code, Database, Terminal, Award } from "lucide-react";
+import { Database, Award, Globe2, Server, Cloud } from "lucide-react";
 
 // Helper to map skill names to devicon identifiers
 const getIconClass = (skill: string) => {
@@ -33,6 +33,7 @@ const getIconClass = (skill: string) => {
     "Netlify": "devicon-netlify-plain colored",
     "GCP": "devicon-googlecloud-plain colored",
     "Figma": "devicon-figma-plain colored",
+    "Render": "devicon-render-plain",
   };
   return map[skill] || "devicon-devicon-plain"; // Fallback
 };
@@ -67,50 +68,42 @@ export default function SkillsBento() {
         </h2>
         
         <BentoGrid className="max-w-6xl mx-auto">
-          {/* Languages */}
+          {/* Frontend */}
           <BentoGridItem 
-             title="Languages"
-             description={<SkillIconGrid skills={SKILLS.languages} />}
-             header={<Code className="w-10 h-10 text-blue-500" />}
+             title="Frontend"
+             description={<SkillIconGrid skills={SKILLS.frontend} />}
+             header={<Globe2 className="w-10 h-10 text-blue-500" />}
              className="md:col-span-1"
-             icon={<Code className="h-4 w-4 text-neutral-500" />}
+             icon={<Globe2 className="h-4 w-4 text-neutral-500" />}
           />
           
-          {/* Frameworks */}
+          {/* Backend */}
           <BentoGridItem 
-             title="Frameworks"
-             description={<SkillIconGrid skills={SKILLS.frameworks} />}
-             header={<Terminal className="w-10 h-10 text-green-500" />}
+             title="Backend"
+             description={<SkillIconGrid skills={SKILLS.backend} />}
+             header={<Server className="w-10 h-10 text-green-500" />}
              className="md:col-span-2"
-             icon={<Terminal className="h-4 w-4 text-neutral-500" />}
+             icon={<Server className="h-4 w-4 text-neutral-500" />}
           />
           
-          {/* Databases & Tools */}
+          {/* Databases */}
           <BentoGridItem 
-             title="Databases & Tools"
-             description={<SkillIconGrid skills={[...SKILLS.databases, ...SKILLS.tools]} />}
+             title="Database"
+             description={<SkillIconGrid skills={SKILLS.database} />}
              header={<Database className="w-10 h-10 text-yellow-500" />}
              className="md:col-span-1"
              icon={<Database className="h-4 w-4 text-neutral-500" />}
           />
-          
-           {/* Certifications (Keep as text or add logos if mapped) */}
-           <BentoGridItem 
-             title="Certifications"
-             description={
-               <div className="space-y-2 mt-2">
-                 {CERTIFICATIONS.slice(0, 3).map((c, i) => (
-                    <div key={i} className="flex items-start gap-2 text-sm text-neutral-300">
-                      <span className="text-purple-400">•</span>
-                      {c.name}
-                    </div>
-                 ))}
-               </div>
-             }
-             header={<Award className="w-10 h-10 text-purple-500" />}
-             className="md:col-span-2"
-             icon={<Award className="h-4 w-4 text-neutral-500" />}
+
+          {/* Cloud & Tools */}
+          <BentoGridItem 
+             title="Cloud"
+             description={<SkillIconGrid skills={SKILLS.cloud} />}
+             header={<Cloud className="w-10 h-10 text-cyan-500" />}
+             className="md:col-span-1"
+             icon={<Cloud className="h-4 w-4 text-neutral-500" />}
           />
+          
 
         </BentoGrid>
       </motion.div>

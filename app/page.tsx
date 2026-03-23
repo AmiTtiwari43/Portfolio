@@ -9,6 +9,7 @@ import ExperienceTimeline from "@/components/layout/ExperienceTimeline";
 import ContactSection from "@/components/layout/ContactSection";
 import SkillsBento from "@/components/layout/SkillsBento";
 import AchievementsSection from "@/components/layout/AchievementsSection";
+import CertificationsSection from "@/components/layout/CertificationsSection";
 
 export default function Home() {
   return (
@@ -34,6 +35,8 @@ export default function Home() {
 
         <ExperienceTimeline />
         
+        <CertificationsSection />
+
         <AchievementsSection />
 
         <ContactSection />
