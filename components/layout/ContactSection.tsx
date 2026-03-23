@@ -101,7 +101,7 @@ export default function ContactSection() {
                         <div className="w-2 h-2 rounded-full bg-accent-secondary animate-pulse" />
                         <div className="w-2 h-2 rounded-full bg-accent-secondary/30" />
                     </div>
-                    Neural_Network_Online // Secure_Transmission_Ready
+                    Developer_Online // Secure_Connection_Ready
                 </div>
                 <div className="absolute bottom-0 right-0 w-24 h-24 bg-accent-secondary/5 blur-2xl rounded-full" />
             </div>
@@ -127,7 +127,7 @@ export default function ContactSection() {
                 <form className="space-y-8" onSubmit={handleSubmit}>
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-3">
-                         <label className="text-[10px] text-accent-primary/60 uppercase tracking-[0.2em] ml-2 font-bold">Identify_Label</label>
+                         <label className="text-[10px] text-accent-primary/60 uppercase tracking-[0.2em] ml-2 font-bold">Name</label>
                          <input 
                             type="text" 
                             placeholder="NAME_REQUIRED"
@@ -137,7 +137,7 @@ export default function ContactSection() {
                          />
                     </div>
                     <div className="space-y-3">
-                         <label className="text-[10px] text-accent-secondary/60 uppercase tracking-[0.2em] ml-2 font-bold">Reply_Address</label>
+                         <label className="text-[10px] text-accent-secondary/60 uppercase tracking-[0.2em] ml-2 font-bold">Reply_Email</label>
                          <input 
                             type="email" 
                             placeholder="EMAIL@SIGNAL.COM"
@@ -162,7 +162,7 @@ export default function ContactSection() {
                   <button type="submit" className="w-full py-6 rounded-2xl bg-white text-black font-bold uppercase tracking-[0.5em] text-xs hover:bg-neutral-200 transition-all flex items-center justify-center gap-4 shadow-[0_0_40px_rgba(255,255,255,0.1)] group/btn overflow-hidden relative">
                     <div className="absolute inset-0 bg-accent-primary translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-1000 opacity-10 skew-x-12" />
                     <Send className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
-                    Initiate_Transmission
+                    Contact Now
                   </button>
                 </form>
             </div>

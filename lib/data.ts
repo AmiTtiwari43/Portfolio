@@ -147,8 +147,8 @@ export const ACHIEVEMENTS: Achievement[] = [
     link: "https://leetcode.com/u/AmitTiwari27/"
   },
   {
-    title: "Hacker Rank",
-    description: "Achieved a 4-Star Java proficiency badge."
+    title: "Leetcode Knight Badge Achieved",
+    description: "Obtained Knight Badge on Leetcode with Rating of 1900+."
   }
 ];
 
